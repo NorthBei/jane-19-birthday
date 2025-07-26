@@ -1,0 +1,221 @@
+html,body{
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+  font-family: "Berlin Sans FB";
+  src: 
+	url("./font/BRLNSR.TTF") format("opentype"),
+	local("Helvetica Neue Bold"),
+	local("HelveticaNeue-Bold");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Tw Cen MT";
+  src: 
+	url("./font/TCM____.TTF") format("opentype"),
+	local("Helvetica Neue Bold"),
+	local("HelveticaNeue-Bold");
+  font-weight: bold;
+}
+
+@font-face {
+font-family: 'LigatureSymbols';
+src: url('./LigatureSymbols/LigatureSymbols-2.11.eot');
+src: url('./LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+	 url('./LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),
+	 url('./LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype'),
+	 url('./LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+src: url('./LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+.lsf, .lsf-icon:before {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+}
+
+.timeline-year{
+	width: 84px;
+	height: 28px;
+	text-align: center;
+	position: relative;
+	display: block;
+	background-color: #ACB7C0;
+	margin: 0 auto;
+	line-height: 28px;
+	font-size: 22px;
+	color: white;
+	border-radius: 7px;
+	font-family: "Tw Cen MT";
+}
+
+.timeline-textBox-date{
+	float: left;
+	font-size: 51px;
+	margin: 0;
+	margin-top: -8px;
+	color: #696E67;
+}
+
+.timeline-month{
+	display: inline-block;
+	margin-top: 8px;
+	margin-left: 8px;
+	font-size: 22px;
+	font-family: initial;
+	color: #696E67;
+}
+
+.timeline-weekDay{
+	display: inline-block;
+	padding: -3px 0;
+	font-size: 18px;
+	margin-left: 8px;
+	color: #989898;
+	margin-top: -3px;
+	font-family: initial;
+}
+
+header{
+	height:100vh;
+	line-height:initial;
+}
+
+#background{
+	background: url(./jane1.png) center no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	width:100%;
+	height:100vh;
+	position:absolute;
+}
+
+#janeLin{
+	position: absolute;
+	top: 15px;
+	left: 54px;
+	font-size: 40px;
+	color: white;
+	font-family:"Berlin Sans FB";
+}
+#connect{
+	position: absolute;
+	right: 0;
+}
+.photoIcon{
+	font-size: 58px;
+	color: white;
+	margin-top: 15px;
+	margin-right: 35px;
+	cursor: pointer;
+	display: inline-block;
+}
+.photoIcon:hover{
+	color:rgba(234,227,201,1);
+}
+
+.cd-timeline-content div img{
+	max-width: 100%;
+}
+
+#sentence{
+	color:white;
+	font-size:80px;
+	font-family: "Tw Cen MT";
+	position:absolute;
+	top:24%;
+	left:9%;
+	text-align: initial;
+	animation-delay: 1s;/*指定該物件特效延遲開始，3.5s代表3.5秒。*/
+	/*-webkit-animation-duration: 1s;設定該物件特效過程的時間，3.5s代表3.5秒。*/
+}
+#sentence>p{
+	margin:0 20px;
+}
+
+#author{
+	font-size: 40px;
+	margin-left: 48%;
+	animation-delay: 1.6s;/*指定該物件特效延遲開始，3.5s代表3.5秒。*/
+	-webkit-animation-duration: 2s;/*設定該物件特效過程的時間，3.5s代表3.5秒。*/
+}
+
+#alien{
+	/*transform: scale(0.6);
+	left: 50%;
+	transform: translate(-50%, 0);*/
+    position: absolute;
+    bottom: -57px;
+    right: 3vw;
+	animation-delay: 3s;/*指定該物件特效延遲開始，3.5s代表3.5秒。*/
+}
+
+/*RWD*/
+@media screen and (max-width: 970px) {
+     #janeLin{
+		left: 30px;
+	}
+	
+	#sentence{
+		font-size:8vw;
+	}
+	
+	#author {
+		font-size: 5vw;
+		margin-left:0;
+		float: right;
+	}
+}
+
+@media screen and (max-width: 550px) {
+     #janeLin{
+		top: 10px;
+		left: 20px;
+		font-size: 29px;
+	}
+	
+	.photoIcon {
+		font-size: 42px;
+		margin-top: 5px;
+		margin-right: 21px;
+	}
+	
+	#sentence {
+		font-size: 43px;
+		top: 18%;
+		left: 4%;
+	}
+	
+	#author {
+		font-size: 30px;
+		margin-left:0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#sentence>p {
+		margin: 0 6px;
+	}
+    #author {
+		padding-right:15px;
+	}
+}
